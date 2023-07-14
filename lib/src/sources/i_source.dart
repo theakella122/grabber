@@ -6,7 +6,7 @@ abstract interface class ISource {
 
   Book getBook(String url);
 
-  List<Chapter> getChaptersList(Book book);
+  ChaptersList getChaptersList(Book book);
 
   Chapter getChapterContent(Chapter chapter);
 

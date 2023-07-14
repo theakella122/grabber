@@ -17,7 +17,7 @@ final class DummySource implements ISource {
   }
 
   @override
-  List<Chapter> getChaptersList(Book book) {
+  ChaptersList getChaptersList(Book book) {
     throw UnimplementedError();
   }
 }

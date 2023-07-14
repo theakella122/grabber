@@ -1,3 +1,5 @@
+typedef ChaptersList = List<Chapter>;
+
 final class Chapter {
   final String url;
   final String title;
