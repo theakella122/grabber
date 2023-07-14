@@ -19,6 +19,7 @@ final class ScribblehubSource implements ISource {
 
   @override
   Future<ChaptersList> getChaptersList(String url) async {
+    client.options.headers['cookie'] = "toc_show=9999";
     final response = await client.get(url);
     final document = parse(response.data.toString());
     final chaptersElements = document.getElementsByClassName("toc_a");
