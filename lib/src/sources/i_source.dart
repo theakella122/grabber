@@ -2,13 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:grabber/grabber.dart';
 
 abstract interface class ISource {
-  final Dio client;
+  final Dio client = Dio();
 
-  Book getBook(String url);
+  Future<Book> getBook(String url);
 
-  ChaptersList getChaptersList(Book book);
+  Future<ChaptersList> getChaptersList(String url);
 
-  Chapter getChapterContent(Chapter chapter);
-
-  const ISource({required this.client});
+  Future<String> getChapterContent(String url);
 }

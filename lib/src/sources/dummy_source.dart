@@ -7,17 +7,17 @@ final class DummySource implements ISource {
   Dio get client => throw UnimplementedError();
 
   @override
-  Book getBook(String url) {
+  Future<Book> getBook(String url) async {
     throw UnimplementedError();
   }
 
   @override
-  Chapter getChapterContent(Chapter chapter) {
+  Future<String> getChapterContent(String url) {
     throw UnimplementedError();
   }
 
   @override
-  ChaptersList getChaptersList(Book book) {
+  Future<ChaptersList> getChaptersList(String url) {
     throw UnimplementedError();
   }
 }
