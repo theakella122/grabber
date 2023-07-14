@@ -4,14 +4,16 @@ final class Book {
   final String title;
   final String author;
   final String synopsis;
-  final String coverUrl;
-  final List<Chapter> chapters;
+  String? coverUrl;
+  bool hasChapters;
+  ChaptersList chapters;
 
   Book({
     required this.title,
     required this.author,
     required this.synopsis,
-    required this.coverUrl,
-    required this.chapters,
+    this.coverUrl,
+    this.chapters = const [],
+    this.hasChapters = false,
   });
 }

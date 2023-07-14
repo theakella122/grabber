@@ -3,13 +3,13 @@ typedef ChaptersList = List<Chapter>;
 final class Chapter {
   final String url;
   final String title;
-  final bool hasContent;
-  final String content;
+  bool hasContent;
+  String? content;
 
-  const Chapter({
+  Chapter({
     required this.url,
     required this.title,
     this.hasContent = false,
-    this.content = '',
+    this.content,
   });
 }
